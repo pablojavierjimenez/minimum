@@ -29,23 +29,28 @@
       padding: .8rem 0;
     }
     header nav {
-      background-color: hsl(230, 70%, 70%);
+      border-bottom: 1px solid #030808;      
+      background-color: hsl(230, 70%, 100%);
     }
     footer nav {
-      background-color: hsl(330, 30%, 50%);
+      background-color: hsl(205, 81%, 57%);
     }
     a {
-      color: white;
+      color:hsl(230, 70%, 0%);
       font-size: 1.2rem;
       text-decoration: none;
+    }
+    footer a {
+      color:hsl(230, 70%, 100%);
     }
     .page {
       display: none;
       margin: 0 auto;
       max-width: 800px;
       min-height: 100vh;
-      padding: .8rem .8rem 2rem;
+      padding: 2rem .8rem 2rem;
       box-sizing: border-box;
+      box-shadow: #b9b9b9 0px 0px 2px;
     }
     .page:target {
       display: block;
@@ -65,8 +70,10 @@
     summary {
       background-color: black;
       color: white;
-      font-size: 1.2rem;
       padding: .4rem 0;
+      font-size: 1.3rem;
+      box-sizing: border-box;
+      height: 2rem;
     }
     summary::-webkit-details-marker {
       display: none
@@ -76,12 +83,14 @@
       content: "+";
       color: #fff;
       float: left;
-      font-size: 1.5em;
+      font-size: 1.2em;
       font-weight: bold;
-      margin: -5px 10px 0 0;
-      padding: 0;
       text-align: center;
-      width: 20px;
+      width: 2rem;
+      padding: .2rem;
+      margin: -.4rem .4rem 0 0;
+      box-sizing: border-box;
+      height: 2rem;
     }
     details[open] {
       padding: 0 0 .5rem;
@@ -106,7 +115,7 @@
   </header>
 
   <main id="main">
-    <div id="!/home" class="page yellow">
+    <div id="!/home" class="page">
       <h1>esta es la pagina 1</h1>
       <details>
         <summary>Copyright 1999-2014.</summary>
@@ -117,7 +126,7 @@
         <progress value="22" max="100"></progress>
       </details>
     </div>
-    <div id="!/css" class="page green">
+    <div id="!/css" class="page">
       <h1>codigo css</h1>
     <pre>
       body {
@@ -177,14 +186,14 @@
       }
     </pre>
     </div>
-    <div id="!/html" class="page purple">
+    <div id="!/html" class="page">
       <h1>codigo html</h1>
       <h4>word breack oportunity</h4>
       <p>
         This is a veryveryveryveryveryveryveryveryvery<wbr>veryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.
       </p>
     </div>
-    <div id="!/javascript" class="page red">
+    <div id="!/javascript" class="page">
       <h1>codigo javascript</h1>
     <pre>
       var app = {};
@@ -212,5 +221,5 @@
 
 </body>
 <script>
-  window.location = window.location + '#!/home';
+  window.location.href = window.location.origin + window.location.pathname + "#!/home";
 </script>
